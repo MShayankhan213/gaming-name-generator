@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gaming Name Generator | FragsProHoter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      color: #00ffcc;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #00ffcc;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .name-box {
+      margin-top: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #00ffcc;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #888;
+    }
+    a {
+      color: #00ffcc;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Free Gaming Name Generator</h1>
+  <button onclick="generateName()">Generate Name</button>
+  <div class="name-box" id="nameBox">Click the button to get a cool name!</div>
+
+  <footer>
+    Created by <a href="https://fragsprohoter.com" target="_blank">fragsprohoter.com</a>
+  </footer>
+
+  <script>
+    const names = [
+      "ShadowSlayer", "GhostFrag", "XenoBlitz", "ViperScope",
+      "DarkHunter", "PixelSniper", "FragMaster", "RapidRogue",
+      "NovaStrike", "CyberKnight", "ToxicClaw", "VenomVortex"
+    ];
+
+    function generateName() {
+      const randomName = names[Math.floor(Math.random() * names.length)];
+      document.getElementById("nameBox").textContent = randomName;
+    }
+  </script>
+</body>
+</html>
